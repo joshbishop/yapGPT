@@ -1,0 +1,25 @@
+{
+  "name": "yap-gpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "clean": "rimraf ./build",
+    "build": "npm run clean && tsc",
+    "start": "node src",
+    "local": "ts-node src",
+    "local:watch": "nodemon -e ts,json --exec \"npm run local\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "openai": "^4.26.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  }
+}
