@@ -19,7 +19,7 @@ const client = new Client({
 
 
 client.on("messageCreate", async msg => {
-    if (msg.author.username === "nexxxy" && msg.content.length > 350 ) {
+    if (msg.content.length > 350 && !msg.author.bot) {
         const response = await summariser.summarise(msg.content)
         msg.reply({content: response,  allowedMentions: { repliedUser: false }});
     }
